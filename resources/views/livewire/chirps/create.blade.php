@@ -8,9 +8,12 @@ use Illuminate\Http\Request;
 
 new class extends Component {
 	//
-#[Rule('required|string|max:255')]
+//#[Rule('required|string|max:255')]
 	public string $message = '';
 
+ public $rules = [
+        'message' => 'required|string|max:255',
+    ];
 	public function store()
 	{
 
